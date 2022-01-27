@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GreetingsController">
+  <children>
+      <Label text="Добро пожаловать в програмный интерфейс &quot;Мой учет&quot;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.45714285714285713" radius="0.5">
+               <stops>
+                  <Stop color="#ab4320" />
+                  <Stop color="#2041ab" offset="0.5167673895011258" />
+                  <Stop color="#c40e55" offset="0.9885057471264367" />
+                  <Stop color="#c40e55" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label text="Для авторизации пользователя введите пожалуйста Логин и Пароль">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <TextField promptText="Login" />
+      <PasswordField promptText="Password" />
+      <Button fx:id="GreetingButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="25.0" prefWidth="357.0" text="Войти в личный кабинет" />
+  </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
+   </padding>
+</VBox>
