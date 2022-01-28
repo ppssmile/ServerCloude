@@ -3,17 +3,9 @@ package org.example.server;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
 
-import java.io.*;
 import java.net.SocketAddress;
-import java.nio.charset.StandardCharsets;
 
 public class MsgServerHandler extends ChannelDuplexHandler {
-
-    @Override
-    public void deregister(ChannelHandlerContext ctx, ChannelPromise promise) throws Exception {
-        super.deregister(ctx, promise);
-
-    }
 
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {

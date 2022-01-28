@@ -13,7 +13,6 @@ public class MsgClientHandler extends ChannelDuplexHandler {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         System.out.println("ChannelActive");
-        ctx.pipeline().channel().alloc().buffer(128);
     }
 
     @Override

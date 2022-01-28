@@ -30,11 +30,9 @@ public class Server {
                             ch.pipeline().addLast(new MsgServerHandler());
                         }
                     })
-                    .option(ChannelOption.SO_BACKLOG, 128)
-                    .childOption(ChannelOption.SO_KEEPALIVE, true)
+                    .option(NioChannelOption.SO_BACKLOG, 128)
                     .childOption(NioChannelOption.SO_KEEPALIVE, true);
             System.out.println("Server initial");
-
             ChannelFuture serverChannelFuture = serverBootstrap.bind(port).sync();
             serverChannelFuture.channel().closeFuture().sync();
             System.out.println("Getting future");
